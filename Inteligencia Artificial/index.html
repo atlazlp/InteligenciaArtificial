@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Atividade de IA</title>
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/opensans.css">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/connect.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/montaGrafo.js"></script>
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <div class="row">
+      <div id="input" class="col-md-12">
+          <h2 class="text-center">INTELIGÊNCIA ARTIFICIAL - Algoritmo: Dijkstra</h2>
+          <input placeholder="Vertices" type="text" id="vertices" onkeyup="numVert();"></input>
+          <br><br>
+          <input type="text" placeholder="Arestas"  id="arestas" onkeyup="numArest();"></input>
+          <br><br>
+          <input type="text" placeholder="Partida" id="partida" onkeyup="caminho();"></input>
+          <br><br>
+          <input type="text" placeholder="Chegada" id="chegada" onkeyup="caminho();"></input>
+          <br><br>
+          Distancia Percorrida: <p id="distancia"></p>
+          Distancia Manhattan: <p id="manhattan"></p>
+      </div>
+      <div id="caminho" class="col-md-6">
+      </div>
+      <div class="col-md-2">
+      </div>
+  </div>
+
+  <div class="row">
+      <div id="grafo">
+          <table>
+              <tbody>
+                  <tr>
+                      <td>
+                          <div id="0" class="numberCircle" style = "display:none">A</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="1" class="numberCircle" style = "display:none">C</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="2" class="numberCircle" style = "display:none">E</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="3" class="numberCircle" style = "display:none">G</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="4" class="numberCircle" style = "display:none">I</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="5" class="numberCircle" style = "display:none">K</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="6" class="numberCircle" style = "display:none">M</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="7" class="numberCircle" style = "display:none">O</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="8" class="numberCircle" style = "display:none">Q</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="9" class="numberCircle" style = "display:none">S</div>
+                      </td>
+
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                      <td>
+                          <div id="10" class="numberCircle" style = "display:none">B</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="11" class="numberCircle" style = "display:none">D</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="12" class="numberCircle" style = "display:none">F</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="13" class="numberCircle" style = "display:none">H</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="14" class="numberCircle" style = "display:none">J</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="15" class="numberCircle" style = "display:none">L</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="16" class="numberCircle" style = "display:none">N</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="17" class="numberCircle" style = "display:none">P</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="18" class="numberCircle" style = "display:none">R</div>
+                      </td>
+                      <td></td>
+                      <td>
+                          <div id="19" class="numberCircle" style = "display:none">T</div>
+                      </td>
+
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  <br><br>
+  <div class="row">
+      <div id="matriz" class="tblMatriz">
+      </div>
+  </div>
+
+
+
+</div>
+
+
+
+</body>
+
+<script>
+$(document).ready(function() {
+    $(function() {
+        window.letras = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T'];
+        window.idLetras = ['0','10','1','11','2','12','3','13','4','14','5','15','6','16','7','17','8','18','9','19'];
+        window.grafo = [];
+        window.pares = [];
+    });
+});
+</script>
+</html>
